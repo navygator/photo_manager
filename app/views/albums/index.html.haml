@@ -1,0 +1,5 @@
+%h1 Hello #{@user[0].first_name @user[0].last_name}
+%ul
+  - @albums.each do |album|
+    %li= link_to album.title, album_path(album.aid)
+  %li= link_to "Saved", album_path("saved")

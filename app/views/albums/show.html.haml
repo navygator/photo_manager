@@ -1,0 +1,7 @@
+%h1= @album.title
+In album #{@photos.size} photos
+
+= link_to "Move to Favorites", album_path(@album.aid), method: :put
+/ %ul
+/   - @photos.each do |photo|
+/     %li= image_tag(photo.src_small)
